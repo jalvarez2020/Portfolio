@@ -149,7 +149,7 @@ footer {
 }
 
 strong, b {
-  font-weight: 300;
+  font-weight: 400;
   color: #666;
 }
 
@@ -1776,6 +1776,7 @@ button:active,
 }
 #main > section.dark strong {
   color: #fff;
+  text-shadow: 2px 2px black;
   border-color: inherit;
 }
 #main > section.dark a {
@@ -1792,7 +1793,7 @@ button:active,
 }
 #main > section.one {
   background-color: #81918E;
-  background-image: url("../../images/streetArt.jpg");
+  background-image: url("../../images/desk2.jpg");
 }
 #main > section.two {
   background-color: #f5fafa;

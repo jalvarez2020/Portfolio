@@ -177,7 +177,7 @@
 	}
 
 	strong, b {
-		font-weight: 300;
+		font-weight: 400;
 		color: #666;
 	}
 
@@ -739,6 +739,7 @@
 
 				strong {
 					color: #fff;
+					text-shadow: 2px 2px black;
 					border-color: inherit;
 				}
 
@@ -760,7 +761,7 @@
 
 			&.one {
 				background-color: #81918E;
-				background-image: url('../../images/streetArt.jpg');
+				background-image: url('../../images/desk2.jpg');
 			}
 
 			&.two {
