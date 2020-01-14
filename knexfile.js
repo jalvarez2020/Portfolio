@@ -13,7 +13,7 @@ module.exports = {
     connection: {
       database: '',
       user:     process.env.USER,
-      password: process.env.PASSWORD //DO NOT COMMIT UNTIL PROCESS ENV!!!!
+      password: process.env.PASSWORD
     },
 
     useNullAsDefault: true,
