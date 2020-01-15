@@ -4,7 +4,7 @@ module.exports = {
   development: {
     client: 'sqlite3',
     connection: {
-      filename: './Data/messages.sqlite3'
+      filename: './Data/messageDB.sqlite3'
     }
   },
 
