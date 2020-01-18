@@ -5,7 +5,8 @@ module.exports = {
     client: 'sqlite3',
     connection: {
       filename: './Data/messageDB.sqlite3'
-    }
+    },
+    useNullAsDefault: true,
   },
 
   production: {
@@ -16,7 +17,7 @@ module.exports = {
       password: process.env.PASSWORD
     },
 
-    useNullAsDefault: true,
+    
 
     migrations: {
       directory: './Data/migrations'

@@ -3,7 +3,7 @@ const knexConfig = require('./knexfile.js');
 const db = knex(knexConfig.development);
 
 getMessages = () => {
-    return db('messages');
+    return db('message');
 }
 
 newMessage = (message) => {
@@ -11,15 +11,15 @@ newMessage = (message) => {
 }
 
 findById = (id) => {
-    return db('message').where('id', id).first();
+    return db('message').where('Id', id).first();
 }
 
 deleteMessage = (id) => {
-    return db('message').where('id', id).del();
+    return db('message').where('Id', id).del();
 }
 
 updateMessageNotes = (id, message) => {
-    return db('message').where('id', id).update(message);
+    return db('message').where('Id', id).update(message);
 }
 
 module.exports = {
