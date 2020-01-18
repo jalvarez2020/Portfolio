@@ -2,24 +2,33 @@ require('dotenv').config()
 const server = require(`./serverConfig`)
 const db = require(`./dbRoutes`)
 
+
 const port = process.env.PORT || 5000
 
 
-
 server.get('/', (req , res) => {
-    db.getMessages().then(messages => {
+    db.getMessages().then( messages => {
         res.status(200).json(messages)
+    })
+    .catch(error => { message: error })
+})
+
+
+server.post('/', (req, res) => {
+    const message = req.body
+    db.newMessage(message).then( reply => {
+        res.status(200).json('Your message has been sent.')
     })
     .catch(error => {message: error})
 })
 
-server.post('/', (req, res) => {
-    let message = req.body
-    db.newMessage(message).then( reply => {
-        res.status(200).send('Your message has been sent.')
+server.delete('/', (req, res) => {
+    const id = req.body.Id
+    db.deleteMessage(id).then(reply => {
+        res.status(200).json('Message deleted!')
     })
+    .catch( error => { message: error })
 })
-
 
 
 

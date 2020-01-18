@@ -18,9 +18,7 @@ deleteMessage = (id) => {
     return db('message').where('Id', id).del();
 }
 
-updateMessageNotes = (id, message) => {
-    return db('message').where('Id', id).update(message);
-}
+
 
 module.exports = {
     getMessages,
