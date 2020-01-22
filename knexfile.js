@@ -7,24 +7,27 @@ module.exports = {
       filename: './Data/messageDB.sqlite3'
     },
     useNullAsDefault: true,
+    migrations: {
+      directory: './migrations/'
+    },
+    seeds: {
+      directory: './seeds/'
+    },
   },
 
   production: {
     client: 'pg',
-    connection: {
-      database: '',
-      user:     process.env.USER,
-      password: process.env.PASSWORD
+    connection: process.env.DB_URL,
+    migrations: {
+      directory: './migrations'
+    },
+    seeds: {
+      directory: './seeds'
     },
 
     
 
-    migrations: {
-      directory: './Data/migrations'
-    },
-    seeds: {
-      directory: './Data/seeds'
-    },
+
   }
 
 };

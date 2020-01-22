@@ -1,10 +1,12 @@
+
 exports.up = function(knex, Promise) {
     return knex.schema.createTable('message', table => {
-        table.integer('Id').primary()
+        table.integer('id').primary()
         table.datetime('dateTime').defaultTo(knex.fn.now());
-        table.string('Name', 100).notNullable();
+        table.string('Name', 50).notNullable();
         table.string('Email').unique().notNullable();
         table.text('Message').notNullable();
+       
     })
   };
   
