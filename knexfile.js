@@ -1,5 +1,4 @@
 // Update with your config settings.
-
 module.exports = {
   development: {
     client: 'sqlite3',
@@ -19,10 +18,10 @@ module.exports = {
     client: 'pg',
     connection: process.env.DB_URL,
     migrations: {
-      directory: './migrations'
+      directory: './migrations/'
     },
     seeds: {
-      directory: './seeds'
+      directory: './seeds/'
     },
 
     

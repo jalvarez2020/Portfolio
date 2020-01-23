@@ -8,7 +8,6 @@
   "devDependencies": {
     "nodemon": "^2.0.2"
   },
-  
   "dependencies": {
     "axios": "^0.19.0",
     "cors": "^2.8.5",
@@ -20,7 +19,6 @@
     "knex-dynamodb-dialect": "^1.0.11",
     "pg": "^7.17.1"
   },
-
   "scripts": {
     "server": "nodemon start"
   }
