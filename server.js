@@ -3,7 +3,7 @@ const server = require(`./serverConfig`)
 const db = require(`./dbRoutes`)
 
 
-const port = process.env.PORT || 5000
+const port =  5000
 
 
 server.get('/', (req , res) => {
@@ -15,11 +15,13 @@ server.get('/', (req , res) => {
 
 
 server.post('/', (req, res) => {
-    const message = req.body
+    const message = req.params
+    
     db.newMessage(message).then( reply => {
-        res.status(200).json('Your message has been sent.')
+        console.log(message)
+        res.status(200).json({ message: "Message Sent"})
     })
-    .catch(error => {message: error})
+    .catch(error => { message: error})
 })
 
 server.delete('/', (req, res) => {

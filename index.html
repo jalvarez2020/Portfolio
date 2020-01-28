@@ -4,13 +4,11 @@
 <head>
 	<title>Javier Alvarez</title>
 	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<meta name="viewport" content="width=device-width,initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="assets/css/main.css" />
 </head>
 
 <body class="is-preload">
-
-	<!-- Header -->
 	<div id="header">
 		<div class="top">
 			<!-- Logo -->
@@ -150,15 +148,15 @@
 				</header>
 				<p> I would love to hear from you please fill out the form below and I will get back to you as soon as
 					possible.</p>
-				<form method="post" action="http://localhost:5000/">
+				<form method="POST" action="http://localhost:5000/" id="mForm">
 					<div class="row">
-						<div class="col-6 col-12-mobile"><input type="text" name="name" placeholder="Name" /></div>
-						<div class="col-6 col-12-mobile"><input type="text" name="email" placeholder="Email" /></div>
+						<div class="col-6 col-12-mobile"><input type="text" name="Name" placeholder="Name" /></div>
+						<div class="col-6 col-12-mobile"><input type="text" name="Email" placeholder="Email" /></div>
 						<div class="col-12">
-							<textarea name="message" placeholder="Message"></textarea>
+							<textarea name="Message" placeholder="Message"></textarea>
 						</div>
 						<div class="col-12">
-							<input type="submit" value="Send Message" />
+							<input type="submit" onclick="" value="Send Message" />
 						</div>
 					</div>
 				</form>
@@ -187,7 +185,8 @@
 	<script src="assets/js/breakpoints.min.js"></script>
 	<script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
-    <script src="assets/js/index.js"></script>
+	<script src="assets/js/index.js"></script>
+	<script src="message.js"></script>
 
 </body>
 
